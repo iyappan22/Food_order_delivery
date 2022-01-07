@@ -1,0 +1,103 @@
+@import "../css/variables.scss";
+
+$headerGrey: #333;
+
+nav {
+  background: $headerGrey;
+  .customRow {
+    .segment {
+      .appIcon {
+        fill: $white;
+      }
+      .appSearch {
+        color: $white;
+      }
+      .headerSearchIcon {
+        fill: $white;
+        margin-right: 10px;
+      }
+      .MuiButtonBase-root {
+        margin-top: 5px;
+      }
+      .MuiInput-underline.Mui-focused:after {
+        border-bottom-color: $white;
+      }
+      .logoutButton {
+        background: transparent;
+        color: $white;
+      }
+    }
+    .segment:first-child {
+      padding: 15px;    
+    }
+    .segment:nth-child(2), .segment:last-child {
+      padding: 0 15px 15px;
+    }
+  }
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  height: 100vh;
+  overflow: auto;
+}
+.MuiPopover-paper {
+  width: 100px !important;
+  max-width: 100px !important;
+  top: 155px !important;
+}
+.appHeaderModal {
+  margin: 30px auto 30px;
+  width: calc(100% - 40px);
+  overflow: auto;
+  background: $white;
+  border: 1px solid #eee;
+  padding: 45px 15px;
+  .MuiTabPanel-root {
+    padding: 0;
+  }
+  .loginForm, .signUpForm {
+    padding: 40px 15px;
+    .MuiFormControl-root {
+      margin-bottom: 5px;
+    }
+    .loginButton, .signUpButton {
+      width: 150px;
+      display: block;
+      margin: 25px auto 0;
+    }
+    .formErrorResponse {
+      font-size: 0.9rem;
+      line-height: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    .customRow {
+      .segment:first-child, .segment:nth-child(2), .segment:last-child {
+        padding: 15px;
+        width: calc(100% / 3);
+        float: left;
+      }
+      .segment:last-child {
+        text-align: right;
+      }
+      .segment {
+        height: 65px;
+        .appIcon {
+          width: 35px;
+          height: 35px;
+        }
+        .MuiButtonBase-root {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .appHeaderModal {
+    width: 500px;
+  }
+  .MuiPopover-paper {
+    top: 55px !important;
+  }
+}

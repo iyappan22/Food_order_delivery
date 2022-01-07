@@ -1,0 +1,247 @@
+@import "../../common/css/variables.scss";
+
+.jumbotronSection {
+  background: #ccc;
+  padding: 45px 15px;
+  .customRow {
+    .segment {
+      h1 {
+        text-align: center;
+        font-size: 2.0rem;
+        font-weight: 500;
+      }
+      .locationText {
+        text-align: center;
+        display: block;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+      .categoriesList {
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0;
+        line-height: 19px;
+        li {
+          font-size: 0.9rem;
+          display: inline-block;
+          margin-right: 6px;
+        }
+      }
+      .block {
+        width: 50%;
+        float: left;
+        margin-top: 10px;
+        .ratingValue, .ratingText {
+          display: block;
+          text-align: center;
+        }
+        .ratingValue {
+          font-size: 1.0rem;
+          margin-bottom: 5px;
+        }
+        .ratingText {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          line-height: 17px;
+          color: #555;
+        }
+      }
+    }
+  }
+}
+.orderSection {
+  padding: 45px 15px;
+  .customRow.topRow {
+    .segment {
+      .cardRoot {
+        .cardContentRoot {
+          h3 {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-left: 20px;
+          }
+          .checkoutButton {
+            width: 100%;
+          }
+          .customRow.total {
+            margin: 15px 0;
+            .block {
+              width: 50%;
+              float: left;
+              font-size: 1.0rem;
+            }
+            .block:last-child {
+              text-align: right;
+            }
+          }
+          .customRow.cartItems {
+            margin-top: 15px;
+            .block {
+              float: left;
+            }
+            .name {
+              width: calc(100% - 190px);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              text-transform: capitalize;
+              font-size: 1.0rem;
+              padding-right: 10px;
+              .fa {
+                margin-right: 15px;
+              }
+            }
+            .price, .quantity {
+              font-size: 1.0rem;
+            }
+            .quantity {
+              text-align: center;
+              width: 140px;
+              .controls {
+                padding: 0;
+                margin: 0 5px;
+              }
+            }
+            .price {
+              text-align: right;
+              width: 50px;  
+            }
+          }
+        }
+      }
+      .menuGroup {
+        margin-bottom: 45px;
+        h2 {
+          margin-top: 0;
+          margin-bottom: 15px;
+          font-size: 0.9rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #888;
+        }
+        hr {
+          margin-bottom: -6px;
+        }
+        .customRow.itemRow {
+          margin-top: 22px;
+          .name, .price, .add {
+            float: left;
+          }
+          .add {
+            width: 20px;
+            margin-top: -7px;
+            .addButton {
+              padding: 0;
+            }
+          }
+          .price {
+            width: 100px;
+            font-size: 1.0rem;
+          }
+          .name {
+            width: calc(100% - 120px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: capitalize;
+            font-size: 1.0rem;
+            padding-right: 10px;
+            .fa-circle {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .jumbotronSection {
+    background: #ccc;
+    padding: 45px 15px;
+    .customRow {
+      .segment {
+        width: 50%;
+        float: left;
+        h1, .locationText, .categoriesList {
+          text-align: left;
+        }
+        .block {
+          width: 47%;
+          .ratingValue, .ratingText {
+            text-align: left;
+          }
+        }
+        .block.rating {
+          margin-right: 6%;
+        }
+      }
+      .segment.details {
+        padding: 0 30px;
+      }
+    }
+  }
+  .orderSection {
+    .customRow.topRow {
+      .segment:first-child {
+        width: 47%;
+        margin-right: 6%;
+      }
+      .segment:last-child {
+        width: 47%;
+        position: sticky;
+        top: 15px;
+      }
+      .segment {
+        float: left;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .jumbotronSection {
+    padding: 60px 15px;
+    .customRow {
+      .segment.image {
+        width: 30%;
+      }
+      .segment.details {
+        width: 70%;
+      }
+      .segment {
+        float: left;
+        h1, .locationText, .categoriesList {
+          text-align: left;
+        }
+        .block {
+          width: 47%;
+          .ratingValue, .ratingText {
+            text-align: left;
+          }
+        }
+        .block.rating {
+          margin-right: 6%;
+        }
+      }
+    }
+    .customRow.topRow {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+  .orderSection {
+    padding: 60px 15px;
+    .customRow.topRow {
+      max-width: 90%;
+      margin: 0 auto;
+      .segment:first-child {
+        width: 47%;
+        margin-right: 11%;
+      }
+      .segment:last-child {
+        width: 42%;
+      }
+    }
+  }
+}
